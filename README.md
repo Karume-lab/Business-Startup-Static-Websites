@@ -1,1 +1,1 @@
-#Static Sites for Business Startups
+#Demo and practice for a static business startup website
