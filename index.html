@@ -5,10 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	<link rel="icon" type="image/png" href="./images/favicon.png">
 	<title>Farm2U | Welcome</title>
 </head>
-<body>
 
+	<!-- Loading Animation -->
+	<div class="fixed top-0 left-0 w-screen h-screen bg-black flex items-center justify-center" role="status" id="loading">
+		<iframe src="https://giphy.com/embed/3o7bu3XilJ5BOiSGic"></iframe>
+	</div>
+	<!-- Loading Animation End -->
+
+<div id="pageContent" class="hidden">
 	<!-- Navbar -->
 	<nav class="p-2 bg-gray-800 text-xl">
 		<ul class="flex justify-between items-center">
@@ -189,8 +196,8 @@
 
 	<!-- Contact -->
 	<section id="contact">
-		<h1 class="underline text-center text-3xl">Talk To Us</h1>
-		<div class="bg-no-repeat" style="background-image: url('./images/customer-service.jpg'); background-size: cover;">
+		<h1 class="underline text-center text-3xl mb-3">Talk To Us</h1>
+		<div class="bg-no-repeat p-5" style="background-image: url('./images/customer-service.jpg'); background-size: cover;">
 			<div class="p-4 bg-white bg-opacity-30 max-w-md rounded-2xl">
 				<span class="text-2xl font-bold">Reach out to us today!</span>
 				<form class="max-w-md">
@@ -264,5 +271,8 @@
 		</div>
 	</footer>
 	<!-- Footer End -->
+
+	<script src="./script.js"></script>
+</div>
 </body>
 </html>
