@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-	<link rel="icon" type="image/png" href="./images/favicon.png">
+	<link id="favicon" rel="icon" type="image/png" href="./images/favicon.png">
 	<title>Farm2U | Welcome</title>
 </head>
 
@@ -18,20 +18,30 @@
 <div id="pageContent" class="hidden">
 	<!-- Navbar -->
 	<nav class="p-2 bg-gray-800 text-xl">
-		<ul class="flex justify-between items-center">
-			<li id="logo" class="rounded-full w-20">
-				<a href="#"><img src="./images/logo.png" alt="" class="opacity-75 hover:opacity-100"></a>
+		<ul class="md:flex md:items-center md:justify-between">
+			<div class="flex justify-between">
+				<li id="logo" class="rounded-full w-20">
+					<a href="#"><img src="./images/logo.png" alt="" class="opacity-75 hover:opacity-100"></a>
+				</li>
+				<div id="hambuggerMenu" class="md:hidden p-2">
+					<i class="fa fa-bars text-white text-2xl cursor-pointer" aria-hidden="true"></i>
+				</div>
+			</div>
+			<li id="navLinks" class="hidden sm:inline w-50 h-auto bg-white bg-opacity-10 md:bg-transparent rounded-t-xl">
+				<div class="flex md:inline flex-col items-center p-2 md:p-0">
+					<a href="#about" class="md:ml-5 text-white hover:text-green-500">About</a>
+					<a href="#features" class="md:ml-5 text-white hover:text-green-500">Features</a>
+					<a href="#services" class="md:ml-5 text-white hover:text-green-500">Services</a>
+					<a href="#contact" class="md:ml-5 text-white hover:text-green-500">Contact Us</a>
+				</div>
 			</li>
-			<li>
-				<a href="#about" class="ml-5 text-white hover:text-green-500">About</a>
-				<a href="#features" class="ml-5 text-white hover:text-green-500">Features</a>
-				<a href="#services" class="ml-5 text-white hover:text-green-500">Services</a>
-				<a href="#contact" class="ml-5 text-white hover:text-green-500">Contact Us</a>
-			</li>
-			<li>
-				<a href="" class="text-white hover:text-red-800">Login</a>
-				<span class="text-white">|</span>
-				<a href="" class="text-white hover:text-red-800">Signup</a>
+			<li id="accountLinks" class="hidden sm:inline w-50 h-auto bg-white bg-opacity-10 md:bg-transparent rounded-b-xl">
+				<div class="flex flex-col md:inline items-center">
+					<div class="border-2 md:border-none w-12 m-2"></div>
+					<a href="" class="text-white hover:text-red-800">Login</a>
+					<span class="text-white hidden md:inline">|</span>
+					<a href="" class="text-white hover:text-red-800">Signup</a>
+				</div>
 			</li>
 		</ul>
 	</nav>
@@ -42,9 +52,9 @@
 		<div class="bg-cover bg-center w-full py-16 md:py-20 xl:py-24" style="background-image: url(./images/header-banner.jpg);">
 			<div class="bg-black bg-opacity-75 p-5">
 				<div class="text-center">
-					<span class="text-5xl font-bold text-green-500">Savor the Freshness, Delivered to Your Doorstep!</span>
+					<span class="md:text-5xl font-bold text-green-500">Savor the Freshness, Delivered to Your Doorstep!</span>
 				</div>
-				<p class="text-white mt-4 text-center text-xl italic">
+				<p class="text-white mt-4 text-center md:text-xl italic">
 				Experience the taste of nature's bounty with Farm2Door.
 				Discover a world of fresh, locally sourced produce delivered straight to your doorstep.
 				Say goodbye to long supply chains and hello to the vibrant flavors of farm-fresh goodness.
@@ -59,22 +69,21 @@
 	<main class="p-3">
 		<!-- About -->
 		<section id="about" class="m-8 bg-green-100 p-8 rounded-3xl">
-			<h1 class="underline text-center text-3xl text-black font-bold mb-8">About Farm2U</h1>
-			<div class="flex items-center mb-2">
-				<img src="./images/about/farmer-truck.png" alt="" class="w-48 mr-4">
-				<p class="text-gray-700">
-					Farm2U is an innovative platform that aims to reduce food waste,
-					promote sustainability, and connect communities through the concept of food sharing.
-					Our mission is to create a more efficient and equitable food system by enabling
-					individuals and businesses to share their surplus food with those in need.
-					At Farm2U, we believe that no food should go to waste when there are people
-					who can benefit from it. We provide a user-friendly online platform where
-					individuals, restaurants, grocery stores, and other food-related businesses
-					can list their excess or near-expiry food items.
+			<h1 class="underline text-center md:text-3xl text-black font-bold md:mb-8">About Farm2U</h1>
+			<div class="md:flex md:items-center">
+				<img src="./images/about/farmer-truck.png" alt="" class="w-48">
+				<p class="text-gray-700 text-center md:text-left">
+					Farm2U is an innovative platform that reduces food waste and connects communities
+					through food sharing. Our mission is to create an efficient and equitable food
+					system by enabling individuals and businesses to share surplus food with those in need.
+					At Farm2U, we believe that no food should go to waste when there are people who can benefit from it. 
+					Join our user-friendly platform to list excess or near-expiry food items from individuals,
+					restaurants, grocery stores, and other food-related businesses.
 				</p>
 			</div>
-			<div class="flex items-center mt-2">
-				<p class="text-gray-700 mr-4">
+			<div class="border-b-2 border-black md:border-none m-10"></div>
+			<div class="md:flex md:items-center">
+				<p class="text-gray-700 text-center md:text-left">
 					These items can include fresh produce, packaged goods, baked goods, and more.
 					Our platform connects food donors with local charitable organizations, community
 					centers, and individuals who can benefit from the surplus food. By facilitating
@@ -99,7 +108,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/features/fruits-basker-1.jpg" alt="A colorful assortment of fresh produce displayed in baskets" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Wide Selection</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Wide Selection</span>
 					</div>
 					<p class="text-md p-2">
 						Explore a diverse range of fruits, vegetables, herbs, and more, carefully curated from local farms.
@@ -108,7 +117,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/features/delivery-person-2.jpg" alt="A delivery person handing over a box of fresh produce to a smiling customer" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Farm-to-Door Delivery</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Farm-to-Door Delivery</span>
 					</div>
 					<p class="text-md p-2">
 						Enjoy the convenience of having farm-fresh goodness delivered directly to your doorstep.
@@ -118,7 +127,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/features/farmer-holding-produce-3.jpg" alt="A farmer proudly holding a basket of freshly harvested vegetables" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Locally Sourced</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Locally Sourced</span>
 					</div>
 					<p class="text-md p-2">
 						Support local farmers and businesses by choosing our locally sourced produce, ensuring freshness and promoting community growth.
@@ -128,7 +137,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/features/fruits-table-4.webp" alt="A table filled with ripe seasonal fruits and vegetables" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Seasonal Delights</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Seasonal Delights</span>
 					</div>
 					<p class="text-md p-2">
 						Experience the joy of seasonal eating with our rotating selection of fruits and vegetables, offering the best flavors nature has to offer.
@@ -138,7 +147,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/features/recyclable-packaging-5.jpg" alt="A stack of recyclable boxes filled with fresh produce" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Sustainable Practices</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Sustainable Practices</span>
 					</div>
 					<p class="text-md p-2">
 						Feel good about your choices with our commitment to eco-friendly packaging and reduced food waste.
@@ -148,7 +157,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/features/bowl-salad-with-bowl-vegetables-bowl-cucumber-6.jpg" alt="A close-up of a vibrant salad bowl filled with fresh greens and colorful vegetables" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Nutritional Excellence</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Nutritional Excellence</span>
 					</div>
 					<p class="text-md p-2">
 						Nourish your body with nutrient-rich, wholesome produce that has been carefully grown and harvested.
@@ -158,7 +167,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/features/recipes-7.webp" alt="A laptop or tablet displaying a cooking website with mouthwatering recipe images" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Recipe Inspiration</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Recipe Inspiration</span>
 					</div>
 					<p class="text-md p-2">
 						Access a treasure trove of recipe ideas and culinary inspiration to make the most of your farm-fresh ingredients.
@@ -168,7 +177,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/features/mobile-ordering-8.jpg" alt="A person using a smartphone app to select specific produce items for their order" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Personalized Orders</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Personalized Orders</span>
 					</div>
 					<p class="text-md p-2">
 						Customize your order based on your preferences, dietary needs, and family size, ensuring you receive exactly what you need.
@@ -178,7 +187,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/features/farm-label-9.jpg" alt="A label or tag displaying the farm name and location on a bunch of fresh herbs" class="object-full w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Transparent Sourcing</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Transparent Sourcing</span>
 					</div>
 					<p class="text-md p-2">
 						Know exactly where your food comes from with our transparent sourcing information, fostering trust and connection with the farmers.
@@ -188,7 +197,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/features/local-honey-jar-10.webp" alt="A box filled with fresh produce, with a small additional package of local honey or artisanal jam nestled inside" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Delightful Surprises</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Delightful Surprises</span>
 					</div>
 					<p class="text-md p-2">
 						Receive occasional bonus items or exclusive seasonal treats as a token of appreciation for being part of the Farm2Door community.
@@ -213,7 +222,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/services/responsive-1.avif" alt="A website with a clean and intuitive design, featuring easy-to-navigate menus and clear product categories" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Easy Browsing</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Easy Browsing</span>
 					</div>
 					<p>
 						Experience a user-friendly interface that makes it easy to navigate through products and categories.
@@ -222,7 +231,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/services/checkout-2.webp" alt="An image depicting a smooth checkout process, showcasing a secure payment gateway and clear steps to complete a purchase" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Intuitive Search</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Intuitive Search</span>
 					</div>
 					<p>
 						Find products quickly and effortlessly with an intuitive search function that provides accurate results.
@@ -231,7 +240,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/services/testimonials-3.jpg" alt="Quotes from satisfied customers, highlighting their positive experiences and feedback about the website and services" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Clear Product Descriptions</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Product Descriptions</span>
 					</div>
 					<p>
 						Benefit from detailed and easy-to-understand product descriptions that help you make informed purchasing decisions.
@@ -240,7 +249,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/services/advanced-search-4.jpg" alt="A search bar with advanced search options, allowing users to refine their product search based on specific criteria" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Interactive Product Images</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Interactive images</span>
 					</div>
 					<p>
 						View high-quality product images from different angles, zoom in for a closer look, and explore additional details.
@@ -249,7 +258,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/services/wishlist-5.webp" alt="A personalized user account with a wishlist and favorite products section, where users can save and organize their preferred items" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Wishlists and Favorites</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Wishlists and Favorites</span>
 					</div>
 					<p>
 						Create personalized wishlists and save favorite products for future reference, making it convenient to revisit and purchase them.
@@ -258,7 +267,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/services/responsive-6.png" alt="The website's adaptability across different devices, including desktop computers, tablets, and smartphones, with the interface adjusting to fit various screen sizes" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Seamless Checkout Process</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Seamless Checkout</span>
 					</div>
 					<p>
 						Enjoy a streamlined and hassle-free checkout process with clear steps and easy-to-follow instructions.
@@ -267,7 +276,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/services/shipment-7.jpeg" alt="A fast and efficient order processing system, displaying a conveyor belt or a warehouse with packages ready for shipment" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Multiple Payment Options</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Payment Alternatives</span>
 					</div>
 					<p>
 						Choose from a variety of secure payment methods to complete your purchase, ensuring convenience and peace of mind.
@@ -276,7 +285,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/services/recommendations-8.jpg" alt="Product recommendations tailored to the user's preferences and browsing history, suggesting relevant items they may be interested in" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Mobile-Friendly Design</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Mobile-Friendly Design</span>
 					</div>
 					<p>
 						Access the website seamlessly on your mobile device, with a responsive design that optimizes browsing and purchasing on smaller screens.
@@ -285,7 +294,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/services/refund-9.jpg" alt="A hassle-free return and refund process, featuring clear instructions and a customer support representative assisting with a return request" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Customer Reviews and Ratings</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">Reviews & Ratings</span>
 					</div>
 					<p>
 						Read authentic customer reviews and ratings for products, helping you make informed decisions based on others' experiences.
@@ -294,7 +303,7 @@
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
 						<img src="./images/services/live-chat-10.webp" alt="An image depicting a live chat feature on the website, showing a conversation between a customer and a support agent, providing real-time assistance and resolving queries" class="object-cover w-full h-full p-3 rounded-3xl">
-						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">24/7 Customer Support</span>
+						<span class="absolute top-5 left-5 bg-green-500 bg-opacity-70 rounded-lg p-1 text-white font-bold uppercase">24/7 Customer Support</span>
 					</div>
 					<p>
 						Get assistance and support anytime you need it, with a dedicated customer support team available round the clock to address any queries or concerns.
