@@ -10,17 +10,17 @@
 </head>
 
 <!-- Loading Animation -->
-<div class="hidden fixed top-0 left-0 w-screen h-screen bg-black flex items-center justify-center" role="status" id="loading">
+<div class="fixed top-0 left-0 w-screen h-screen bg-black flex items-center justify-center" role="status" id="loading">
 	<img src="./images/loading-animation.gif">
 </div>
 <!-- Loading Animation End -->
 
-<div id="pageContent">
+<div id="pageContent hidden">
 	<!-- Navbar -->
 	<nav class="p-2 bg-gray-800 text-xl">
 		<ul class="flex justify-between items-center">
 			<li class="rounded-full w-20">
-				<a href="#"><img src="./images/logo.png" alt=""></a>
+				<a href="#"><img src="./images/logo.png" alt="" class="opacity-75 hover:opacity-100"></a>
 			</li>
 			<li>
 				<a href="#about" class="ml-5 text-white hover:text-green-500">About</a>
@@ -30,7 +30,7 @@
 			</li>
 			<li>
 				<a href="" class="text-white hover:text-red-800">Login</a>
-				<span class="text-white hover:text-red-800 cursor-pointer">|</span>
+				<span class="text-white">|</span>
 				<a href="" class="text-white hover:text-red-800">Signup</a>
 			</li>
 		</ul>
@@ -40,9 +40,11 @@
 	<!-- Header -->
 	<header>
 		<div class="bg-cover bg-center w-full py-16 md:py-20 xl:py-24" style="background-image: url(./images/header-banner.jpg);">
-			<div class="bg-black bg-opacity-50 p-5">
-				<span class="text-3xl font-bold text-white">Savor the Freshness, Delivered to Your Doorstep!</span>
-				<p class="text-white mt-4">
+			<div class="bg-black bg-opacity-75 p-5">
+				<div class="text-center">
+					<span class="text-5xl font-bold text-green-500">Savor the Freshness, Delivered to Your Doorstep!</span>
+				</div>
+				<p class="text-white mt-4 text-center text-xl italic">
 				Experience the taste of nature's bounty with Farm2Door.
 				Discover a world of fresh, locally sourced produce delivered straight to your doorstep.
 				Say goodbye to long supply chains and hello to the vibrant flavors of farm-fresh goodness.
@@ -58,103 +60,132 @@
 		<!-- About -->
 		<section id="about">
 			<h1 class="underline text-center text-3xl">About Farm2U</h1>
-			<p>
-				Farm2U is an innovative platform that aims to reduce food waste,
-				promote sustainability, and connect communities through the concept of food sharing.
-				Our mission is to create a more efficient and equitable food system by enabling
-				individuals and businesses to share their surplus food with those in need.
-				At Farm2U, we believe that no food should go to waste when there are people
-				who can benefit from it. We provide a user-friendly online platform where
-				individuals, restaurants, grocery stores, and other food-related businesses
-				can list their excess or near-expiry food items. These items can include fresh
-				produce, packaged goods, baked goods, and more.
-				Our platform connects food donors with local charitable organizations, community
-				centers, and individuals who can benefit from the surplus food. By facilitating
-				these connections, we aim to address food insecurity and promote sustainable
-				practices by diverting perfectly good food from ending up in landfills.
-			</p>
+			<div class="flex items-center">
+				<img src="./images/about/farmer-truck.png" alt="">
+				<p>
+					Farm2U is an innovative platform that aims to reduce food waste,
+					promote sustainability, and connect communities through the concept of food sharing.
+					Our mission is to create a more efficient and equitable food system by enabling
+					individuals and businesses to share their surplus food with those in need.
+					At Farm2U, we believe that no food should go to waste when there are people
+					who can benefit from it. We provide a user-friendly online platform where
+					individuals, restaurants, grocery stores, and other food-related businesses
+					can list their excess or near-expiry food items.
+				</p>
+			</div>
+			<div class="flex items-center">
+				<p>
+					These items can include fresh
+					produce, packaged goods, baked goods, and more.
+					Our platform connects food donors with local charitable organizations, community
+					centers, and individuals who can benefit from the surplus food. By facilitating
+					these connections, we aim to address food insecurity and promote sustainable
+					practices by diverting perfectly good food from ending up in landfills.
+				</p>
+				<img src="./images/about/farmer-truck-illustration.png" alt="">
+			</div>
 		</section>
 
 		<!-- Features -->
 		<section id="features">
 			<h1 class="underline text-center text-3xl">Features Available</h1>
 			<span>Here are some of the features we bring to you via our online platform</span>
-			<ul class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3">
-				<li class="">
-					<img src="./images/features/fruits-basker-1.jpg" alt="A colorful assortment of fresh produce displayed in baskets">
-					<p>
-						Wide Selection:
+			<ul class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5">
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/features/fruits-basker-1.jpg" alt="A colorful assortment of fresh produce displayed in baskets" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Wide Selection</span>
+					</div>
+					<p class="text-md p-2">
 						Explore a diverse range of fruits, vegetables, herbs, and more, carefully curated from local farms.
 					</p>
 				</li>
-				<li>
-					<img src="./images/features/delivery-person-2.jpg" alt="A delivery person handing over a box of fresh produce to a smiling customer">
-					<p>
-						Farm-to-Door Delivery:
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/features/delivery-person-2.jpg" alt="A delivery person handing over a box of fresh produce to a smiling customer" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Farm-to-Door Delivery</span>
+					</div>
+					<p class="text-md p-2">
 						Enjoy the convenience of having farm-fresh goodness delivered directly to your doorstep.
 					</p>
 					
 				</li>
-				<li>
-					<img src="./images/features/farmer-holding-produce-3.jpg" alt="A farmer proudly holding a basket of freshly harvested vegetables">
-					<p>
-						Locally Sourced:
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/features/farmer-holding-produce-3.jpg" alt="A farmer proudly holding a basket of freshly harvested vegetables" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Locally Sourced</span>
+					</div>
+					<p class="text-md p-2">
 						Support local farmers and businesses by choosing our locally sourced produce, ensuring freshness and promoting community growth.
 					</p>
 					
 				</li>
-				<li>
-					<img src="./images/features/fruits-table-4.webp" alt="A table filled with ripe seasonal fruits and vegetables">
-					<p>
-						Seasonal Delights:
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/features/fruits-table-4.webp" alt="A table filled with ripe seasonal fruits and vegetables" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Seasonal Delights</span>
+					</div>
+					<p class="text-md p-2">
 						Experience the joy of seasonal eating with our rotating selection of fruits and vegetables, offering the best flavors nature has to offer.
 					</p>
 					
 				</li>
-				<li>
-					<img src="./images/features/recyclable-packaging-5.jpg" alt="A stack of recyclable boxes filled with fresh produce">
-					<p>
-						Sustainable Practices:
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/features/recyclable-packaging-5.jpg" alt="A stack of recyclable boxes filled with fresh produce" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Sustainable Practices</span>
+					</div>
+					<p class="text-md p-2">
 						Feel good about your choices with our commitment to eco-friendly packaging and reduced food waste.
 					</p>
 					
 				</li>
-				<li>
-					<img src="./images/features/bowl-salad-with-bowl-vegetables-bowl-cucumber-6.jpg" alt="A close-up of a vibrant salad bowl filled with fresh greens and colorful vegetables">
-					<p>
-						Nutritional Excellence:
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/features/bowl-salad-with-bowl-vegetables-bowl-cucumber-6.jpg" alt="A close-up of a vibrant salad bowl filled with fresh greens and colorful vegetables" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Nutritional Excellence</span>
+					</div>
+					<p class="text-md p-2">
 						Nourish your body with nutrient-rich, wholesome produce that has been carefully grown and harvested.
 					</p>
 					
 				</li>
-				<li>
-					<img src="./images/features/recipes-7.webp" alt="A laptop or tablet displaying a cooking website with mouthwatering recipe images">
-					<p>
-						Recipe Inspiration:
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/features/recipes-7.webp" alt="A laptop or tablet displaying a cooking website with mouthwatering recipe images" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Recipe Inspiration</span>
+					</div>
+					<p class="text-md p-2">
 						Access a treasure trove of recipe ideas and culinary inspiration to make the most of your farm-fresh ingredients.
 					</p>
 					
 				</li>
-				<li>
-					<img src="./images/features/mobile-ordering-8.jpg" alt="A person using a smartphone app to select specific produce items for their order">
-					<p>
-						Personalized Orders:
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/features/mobile-ordering-8.jpg" alt="A person using a smartphone app to select specific produce items for their order" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Personalized Orders</span>
+					</div>
+					<p class="text-md p-2">
 						Customize your order based on your preferences, dietary needs, and family size, ensuring you receive exactly what you need.
 					</p>
 					
 				</li>
-				<li>
-					<img src="./images/features/farm-label-9.jpg" alt="A label or tag displaying the farm name and location on a bunch of fresh herbs">
-					<p>
-						Transparent Sourcing:
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/features/farm-label-9.jpg" alt="A label or tag displaying the farm name and location on a bunch of fresh herbs" class="object-full w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Transparent Sourcing</span>
+					</div>
+					<p class="text-md p-2">
 						Know exactly where your food comes from with our transparent sourcing information, fostering trust and connection with the farmers.
 					</p>
 					
 				</li>
-				<li>
-					<img src="./images/features/local-honey-jar.webp" alt="A box filled with fresh produce, with a small additional package of local honey or artisanal jam nestled inside">
-					<p>
-						Delightful Surprises:
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/features/local-honey-jar-10.webp" alt="A box filled with fresh produce, with a small additional package of local honey or artisanal jam nestled inside" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Delightful Surprises</span>
+					</div>
+					<p class="text-md p-2">
 						Receive occasional bonus items or exclusive seasonal treats as a token of appreciation for being part of the Farm2Door community.
 					</p>
 					
@@ -169,54 +200,74 @@
 			<span>We offer a wide variety of services.</span>
 			<ul class="grid grid-cols-5 gap-3">
 				<li>
-					<img src="url-to-image1" alt="Wide Selection">
-					Wide Selection: Explore a diverse range of fruits, vegetables, herbs, and more, carefully curated from local farms.
-					[Image: A colorful assortment of fresh produce displayed in baskets.]
+					<img src="./images/services/responsive-1.avif" alt="A website with a clean and intuitive design, featuring easy-to-navigate menus and clear product categories">
+					<p>
+						Easy Browsing:
+						Experience a user-friendly interface that makes it easy to navigate through products and categories.
+					</p>
 				</li>
 				<li>
-					<img src="url-to-image2" alt="Farm-to-Door Delivery">
-					Farm-to-Door Delivery: Enjoy the convenience of having farm-fresh goodness delivered directly to your doorstep.
-					[Image: A delivery person handing over a box of fresh produce to a smiling customer.]
+					<img src="./images/services/checkout-2.webp" alt="An image depicting a smooth checkout process, showcasing a secure payment gateway and clear steps to complete a purchase">
+					<p>
+						Intuitive Search:
+						Find products quickly and effortlessly with an intuitive search function that provides accurate results.
+					</p>
 				</li>
 				<li>
-					<img src="url-to-image3" alt="Locally Sourced">
-					Locally Sourced: Support local farmers and businesses by choosing our locally sourced produce, ensuring freshness and promoting community growth.
-					[Image: A farmer proudly holding a basket of freshly harvested vegetables.]
+					<img src="./images/services/testimonials-3.jpg" alt="Quotes from satisfied customers, highlighting their positive experiences and feedback about the website and services">
+					<p>
+						Clear Product Descriptions:
+						Benefit from detailed and easy-to-understand product descriptions that help you make informed purchasing decisions.
+					</p>
 				</li>
 				<li>
-					<img src="url-to-image4" alt="Seasonal Delights">
-					Seasonal Delights: Experience the joy of seasonal eating with our rotating selection of fruits and vegetables, offering the best flavors nature has to offer.
-					[Image: A table filled with ripe seasonal fruits and vegetables.]
+					<img src="./images/services/advanced-search-4.jpg" alt="A search bar with advanced search options, allowing users to refine their product search based on specific criteria">
+					<p>
+						Interactive Product Images:
+						View high-quality product images from different angles, zoom in for a closer look, and explore additional details.
+					</p>
 				</li>
 				<li>
-					<img src="url-to-image5" alt="Sustainable Practices">
-					Sustainable Practices: Feel good about your choices with our commitment to eco-friendly packaging and reduced food waste.
-					[Image: A stack of recyclable boxes filled with fresh produce.]
+					<img src="./images/services/wishlist-5.webp" alt="A personalized user account with a wishlist and favorite products section, where users can save and organize their preferred items">
+					<p>
+						Wishlists and Favorites:
+						Create personalized wishlists and save favorite products for future reference, making it convenient to revisit and purchase them.
+					</p>
 				</li>
 				<li>
-					<img src="url-to-image6" alt="Nutritional Excellence">
-					Nutritional Excellence: Nourish your body with nutrient-rich, wholesome produce that has been carefully grown and harvested.
-					[Image: A close-up of a vibrant salad bowl filled with fresh greens and colorful vegetables.]
+					<img src="./images/services/responsive-6.png" alt="The website's adaptability across different devices, including desktop computers, tablets, and smartphones, with the interface adjusting to fit various screen sizes">
+					<p>
+						Seamless Checkout Process:
+						Enjoy a streamlined and hassle-free checkout process with clear steps and easy-to-follow instructions.
+					</p>
 				</li>
 				<li>
-					<img src="url-to-image7" alt="Recipe Inspiration">
-					Recipe Inspiration: Access a treasure trove of recipe ideas and culinary inspiration to make the most of your farm-fresh ingredients.
-					[Image: A laptop or tablet displaying a cooking website with mouthwatering recipe images.]
+					<img src="./images/services/shipment-7.jpeg" alt="A fast and efficient order processing system, displaying a conveyor belt or a warehouse with packages ready for shipment">
+					<p>
+						Multiple Payment Options:
+						Choose from a variety of secure payment methods to complete your purchase, ensuring convenience and peace of mind.
+					</p>
 				</li>
 				<li>
-					<img src="url-to-image8" alt="Personalized Orders">
-					Personalized Orders: Customize your order based on your preferences, dietary needs, and family size, ensuring you receive exactly what you need.
-					[Image: A person using a smartphone app to select specific produce items for their order.]
+					<img src="./images/services/recommendations-8.jpg" alt="Product recommendations tailored to the user's preferences and browsing history, suggesting relevant items they may be interested in">
+					<p>
+						Mobile-Friendly Design:
+						Access the website seamlessly on your mobile device, with a responsive design that optimizes browsing and purchasing on smaller screens.
+					</p>
 				</li>
 				<li>
-					<img src="url-to-image9" alt="Transparent Sourcing">
-					Transparent Sourcing: Know exactly where your food comes from with our transparent sourcing information, fostering trust and connection with the farmers.
-					[Image: A label or tag displaying the farm name and location on a bunch of fresh herbs.]
+					<img src="./images/services/refund-9.jpg" alt="A hassle-free return and refund process, featuring clear instructions and a customer support representative assisting with a return request">
+					<p>
+						Customer Reviews and Ratings:
+						Read authentic customer reviews and ratings for products, helping you make informed decisions based on others' experiences.
+					</p>
 				</li>
 				<li>
-					<img src="url-to-image10" alt="Delightful Surprises">
-					Delightful Surprises: Receive occasional bonus items or exclusive seasonal treats as a token of appreciation for being part of the Farm2Door community.
-					[Image: A box filled with fresh produce, with a small additional package of local honey or artisanal jam nestled inside.]
+					<img src="./images/services/live-chat-10.webp" alt="An image depicting a live chat feature on the website, showing a conversation between a customer and a support agent, providing real-time assistance and resolving queries">
+					<p>
+						24/7 Customer Support:
+						Get assistance and support anytime you need it, with a dedicated customer support team available round the clock to address any queries or concerns.
+					</p>
 				</li>
 			</ul>
 		</section>
@@ -232,19 +283,19 @@
 				<form class="max-w-md">
 				<div class="mb-4">
 					<label for="firstName" class="block mb-2 font-medium">First Name</label>
-					<input type="text" id="firstName" name="firstName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" required>
+					<input type="text" id="firstName" name="firstName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-green-500" required>
 				</div>
 				<div class="mb-4">
 					<label for="surName" class="block mb-2 font-medium">Surname</label>
-					<input type="text" id="surName" name="surName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" required>
+					<input type="text" id="surName" name="surName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-green-500" required>
 				</div>
 				<div class="mb-4">
 					<label for="email" class="block mb-2 font-medium">Email Address</label>
-					<input type="text" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" required>
+					<input type="text" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-green-500" required>
 				</div>
 				<div class="mb-4">
 					<label for="message" class="block mb-2 font-medium">Message</label>
-					<textarea id="message" name="message" class="w-full px-3 py-2 border border-gray-300 rounded-md resize-none focus:outline-none focus:border-blue-500" placeholder="Your message here..." rows="6" required></textarea>
+					<textarea id="message" name="message" class="w-full px-3 py-2 border border-gray-300 rounded-md resize-none focus:outline-none focus:border-green-500" placeholder="Your message here..." rows="6" required></textarea>
 				</div>
 				<button type="submit" class="px-4 py-2 text-white bg-green-500 rounded-md hover:bg-green-700">Send</button>
 				</form>
