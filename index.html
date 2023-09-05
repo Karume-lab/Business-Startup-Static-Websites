@@ -58,11 +58,11 @@
 
 	<main class="p-3">
 		<!-- About -->
-		<section id="about">
-			<h1 class="underline text-center text-3xl">About Farm2U</h1>
-			<div class="flex items-center">
-				<img src="./images/about/farmer-truck.png" alt="">
-				<p>
+		<section id="about" class="m-8 bg-green-100 p-8 rounded-3xl">
+			<h1 class="underline text-center text-3xl text-black font-bold mb-8">About Farm2U</h1>
+			<div class="flex items-center mb-2">
+				<img src="./images/about/farmer-truck.png" alt="" class="w-48 mr-4">
+				<p class="text-gray-700">
 					Farm2U is an innovative platform that aims to reduce food waste,
 					promote sustainability, and connect communities through the concept of food sharing.
 					Our mission is to create a more efficient and equitable food system by enabling
@@ -73,23 +73,28 @@
 					can list their excess or near-expiry food items.
 				</p>
 			</div>
-			<div class="flex items-center">
-				<p>
-					These items can include fresh
-					produce, packaged goods, baked goods, and more.
+			<div class="flex items-center mt-2">
+				<p class="text-gray-700 mr-4">
+					These items can include fresh produce, packaged goods, baked goods, and more.
 					Our platform connects food donors with local charitable organizations, community
 					centers, and individuals who can benefit from the surplus food. By facilitating
 					these connections, we aim to address food insecurity and promote sustainable
 					practices by diverting perfectly good food from ending up in landfills.
 				</p>
-				<img src="./images/about/farmer-truck-illustration.png" alt="">
+				<img src="./images/about/farmer-truck-illustration.png" alt="" class="w-48">
 			</div>
 		</section>
 
 		<!-- Features -->
-		<section id="features">
-			<h1 class="underline text-center text-3xl">Features Available</h1>
-			<span>Here are some of the features we bring to you via our online platform</span>
+		<section id="features" class="m-10">
+			<h1 class="underline text-center text-3xl text-black font-bold mb-8">Features Available</h1>
+			<span>
+				Farm2U offers a range of powerful features that make it easy for individuals,
+				businesses, and organizations to participate in our food sharing community.
+				Whether you're a food donor looking to reduce waste or someone in need of
+				fresh, nutritious food, our platform has you covered. Explore the key features
+				below and see how Farm2U is revolutionizing the way we share and access food.
+			</span>
 			<ul class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5">
 				<li class="bg-gray-100 shadow-lg">
 					<div class="w-50 h-64 relative">
@@ -195,77 +200,103 @@
 		<!-- Features End -->
 
 		<!-- Services -->
-		<section id="services">
-			<h1 class="underline text-center text-3xl">Services Offered</h1>
-			<span>We offer a wide variety of services.</span>
-			<ul class="grid grid-cols-5 gap-3">
-				<li>
-					<img src="./images/services/responsive-1.avif" alt="A website with a clean and intuitive design, featuring easy-to-navigate menus and clear product categories">
+		<section id="services" class="m-10">
+			<h1 class="underline text-center text-3xl text-black font-bold mb-8">Services Offered</h1>
+			<span>
+				At Farm2U, we are dedicated to providing a comprehensive range of services that
+				support our mission of reducing food waste and promoting food access. Our platform
+				connects food donors with those in need through a seamless and user-friendly
+				experience. Explore our services below and see how Farm2U is transforming the way
+				we share and distribute surplus food, ensuring that no one goes hungry.
+			</span>
+			<ul class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5">
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/services/responsive-1.avif" alt="A website with a clean and intuitive design, featuring easy-to-navigate menus and clear product categories" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Easy Browsing</span>
+					</div>
 					<p>
-						Easy Browsing:
 						Experience a user-friendly interface that makes it easy to navigate through products and categories.
 					</p>
 				</li>
-				<li>
-					<img src="./images/services/checkout-2.webp" alt="An image depicting a smooth checkout process, showcasing a secure payment gateway and clear steps to complete a purchase">
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/services/checkout-2.webp" alt="An image depicting a smooth checkout process, showcasing a secure payment gateway and clear steps to complete a purchase" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Intuitive Search</span>
+					</div>
 					<p>
-						Intuitive Search:
 						Find products quickly and effortlessly with an intuitive search function that provides accurate results.
 					</p>
 				</li>
-				<li>
-					<img src="./images/services/testimonials-3.jpg" alt="Quotes from satisfied customers, highlighting their positive experiences and feedback about the website and services">
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/services/testimonials-3.jpg" alt="Quotes from satisfied customers, highlighting their positive experiences and feedback about the website and services" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Clear Product Descriptions</span>
+					</div>
 					<p>
-						Clear Product Descriptions:
 						Benefit from detailed and easy-to-understand product descriptions that help you make informed purchasing decisions.
 					</p>
 				</li>
-				<li>
-					<img src="./images/services/advanced-search-4.jpg" alt="A search bar with advanced search options, allowing users to refine their product search based on specific criteria">
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/services/advanced-search-4.jpg" alt="A search bar with advanced search options, allowing users to refine their product search based on specific criteria" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Interactive Product Images</span>
+					</div>
 					<p>
-						Interactive Product Images:
 						View high-quality product images from different angles, zoom in for a closer look, and explore additional details.
 					</p>
 				</li>
-				<li>
-					<img src="./images/services/wishlist-5.webp" alt="A personalized user account with a wishlist and favorite products section, where users can save and organize their preferred items">
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/services/wishlist-5.webp" alt="A personalized user account with a wishlist and favorite products section, where users can save and organize their preferred items" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Wishlists and Favorites</span>
+					</div>
 					<p>
-						Wishlists and Favorites:
 						Create personalized wishlists and save favorite products for future reference, making it convenient to revisit and purchase them.
 					</p>
 				</li>
-				<li>
-					<img src="./images/services/responsive-6.png" alt="The website's adaptability across different devices, including desktop computers, tablets, and smartphones, with the interface adjusting to fit various screen sizes">
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/services/responsive-6.png" alt="The website's adaptability across different devices, including desktop computers, tablets, and smartphones, with the interface adjusting to fit various screen sizes" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Seamless Checkout Process</span>
+					</div>
 					<p>
-						Seamless Checkout Process:
 						Enjoy a streamlined and hassle-free checkout process with clear steps and easy-to-follow instructions.
 					</p>
 				</li>
-				<li>
-					<img src="./images/services/shipment-7.jpeg" alt="A fast and efficient order processing system, displaying a conveyor belt or a warehouse with packages ready for shipment">
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/services/shipment-7.jpeg" alt="A fast and efficient order processing system, displaying a conveyor belt or a warehouse with packages ready for shipment" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Multiple Payment Options</span>
+					</div>
 					<p>
-						Multiple Payment Options:
 						Choose from a variety of secure payment methods to complete your purchase, ensuring convenience and peace of mind.
 					</p>
 				</li>
-				<li>
-					<img src="./images/services/recommendations-8.jpg" alt="Product recommendations tailored to the user's preferences and browsing history, suggesting relevant items they may be interested in">
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/services/recommendations-8.jpg" alt="Product recommendations tailored to the user's preferences and browsing history, suggesting relevant items they may be interested in" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Mobile-Friendly Design</span>
+					</div>
 					<p>
-						Mobile-Friendly Design:
 						Access the website seamlessly on your mobile device, with a responsive design that optimizes browsing and purchasing on smaller screens.
 					</p>
 				</li>
-				<li>
-					<img src="./images/services/refund-9.jpg" alt="A hassle-free return and refund process, featuring clear instructions and a customer support representative assisting with a return request">
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/services/refund-9.jpg" alt="A hassle-free return and refund process, featuring clear instructions and a customer support representative assisting with a return request" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">Customer Reviews and Ratings</span>
+					</div>
 					<p>
-						Customer Reviews and Ratings:
 						Read authentic customer reviews and ratings for products, helping you make informed decisions based on others' experiences.
 					</p>
 				</li>
-				<li>
-					<img src="./images/services/live-chat-10.webp" alt="An image depicting a live chat feature on the website, showing a conversation between a customer and a support agent, providing real-time assistance and resolving queries">
+				<li class="bg-gray-100 shadow-lg">
+					<div class="w-50 h-64 relative">
+						<img src="./images/services/live-chat-10.webp" alt="An image depicting a live chat feature on the website, showing a conversation between a customer and a support agent, providing real-time assistance and resolving queries" class="object-cover w-full h-full p-3 rounded-3xl">
+						<span class="absolute top-5 left-5 bg-green-500 rounded-lg p-2 bg-opacity-50 text-white font-bold uppercase">24/7 Customer Support</span>
+					</div>
 					<p>
-						24/7 Customer Support:
 						Get assistance and support anytime you need it, with a dedicated customer support team available round the clock to address any queries or concerns.
 					</p>
 				</li>
@@ -276,8 +307,8 @@
 
 	<!-- Contact -->
 	<section id="contact">
-		<h1 class="underline text-center text-3xl mb-3">Talk To Us</h1>
 		<div class="bg-no-repeat p-5" style="background-image: url('./images/customer-service.jpg'); background-size: cover;">
+			<h1 class="underline text-center text-3xl text-black font-bold mb-8">Talk To Us</h1>
 			<div class="p-4 bg-white bg-opacity-30 max-w-md rounded-2xl">
 				<span class="text-2xl font-bold">Reach out to us today!</span>
 				<form class="max-w-md">
