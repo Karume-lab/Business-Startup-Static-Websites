@@ -31,9 +31,13 @@ document.addEventListener("visibilitychange", function () {
 	var favicon = document.getElementById("favicon");
 	if (document.visibilityState === "hidden") {
 		document.title = "Come Back";
-		favicon.href = "./images/sad-favicon.png";
+		favicon.href = "./images/favicons/sad.png";
 	} else {
-		document.title = "Farm2U | Welcome";
-		favicon.href = "./images/favicon.png";
+		document.title = "Welcome Back!";
+		favicon.href = "./images/favicons/happy.png";
+		setTimeout(function() {
+			document.title = "Farm2U | Welcome";
+			favicon.href = "./images/favicons/default.png";
+		}, 3000)
 	}
 });
